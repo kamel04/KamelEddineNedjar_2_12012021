@@ -22,7 +22,7 @@ h4 {
 header {
   display: grid;
   align-items: center;
-  max-width: 1440px;
+  max-width: 1380px;
   margin: auto;
 }
 
@@ -42,7 +42,7 @@ header {
   padding: 2rem;
   font-weight: 500;
   text-align: center;
-  border-top: 3px solid transparent;
+  border-top: 2px solid transparent;
   border-bottom: 3px solid transparent;
 }
 
@@ -61,10 +61,48 @@ header {
   }
   #navigation-lien-h {
     color: #0065fc;
-    border-top: 3px solid #0065fc;
+    border-top: 2px solid #0065fc;
   }
   .navigation-lien:hover {
     color: #0065fc;
-    border-top: 3px solid #0065fc;
+    border-top: 2px solid #0065fc;
   }
+}
+@media screen and (max-width: 599px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo . inscription" "navigation navigation navigation";
+  }
+  .logo {
+    order: 0;
+  }
+  .navigation-sinscrire {
+    order: 1;
+  }
+  .navigation-bar {
+    order: 2;
+  }
+  #navigation-lien-h {
+    color: #0065fc;
+    border-bottom: 3px solid #0065fc;
+    padding: 1rem 2rem;
+  }
+  .navigation-lien {
+    border-top: none;
+    width: 50%;
+    border-bottom: 3px solid #f2f2f2;
+    padding: 1rem 2rem;
+  }
+
+  .navigation-lien:hover {
+    color: #0065fc;
+    border-bottom: 3px solid #0065fc;
+  }
+}
+
+main {
+  max-width: 1380px;
+  margin: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
