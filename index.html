@@ -33,46 +33,58 @@
     <main>
       <!--Recherche-->
       <section id="recherche">
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre ville ou en pleine nature</p>
+        <h1 class="recherche-h1">
+          Trouvez votre hébergement pour des vacances de rêve
+        </h1>
+        <p class="recherche-p">En plein centre ville ou en pleine nature</p>
 
         <div id="recherche-ville">
           <div id="localisation">
             <div class=""><i class="fas fa-map-marker-alt"></i></div>
           </div>
-          <input type="text" name="ville" value="Marseille, France" />
-          <button type="button" id="bouton-recherche">Rechercher</button>
-          <button type="button" id="icone-recherche">
-            <i class="fas fa-search"></i>
+          <input
+            class="recherche-input"
+            type="text"
+            name="ville"
+            value="Marseille, France"
+          />
+          <button class="recherche-bouton">
+            <span
+              class="recherche-bouton-texte"
+              type="button"
+              id="bouton-recherche"
+              >Rechercher</span
+            >
+            <i id="loupe" class="fas fa-search"></i>
           </button>
         </div>
 
         <div id="filtres">
           <div class="titre-filtres">Filtres</div>
           <div class="boutons-filtres">
-            <div class="economique">
+            <div class="bouton-filtre">
               <i class="fas fa-money-bill-wave"></i>
               <span class="text-filtre">Économique</span>
             </div>
-            <div class="familial">
+            <div class="bouton-filtre">
               <i class="fas fa-child"></i>
               <span class="text-filtre">Familial</span>
             </div>
-            <div class="remantique">
+            <div class="bouton-filtre">
               <i class="fas fa-heart"></i>
               <span class="text-filtre">Romantique</span>
             </div>
-            <div class="animaux">
+            <div class="bouton-filtre">
               <i class="fas fa-dog"></i>
               <span class="text-filtre">Animaux autorisés</span>
             </div>
           </div>
-          <div id="info">
-            <i class="fas fa-info"></i>
-            <span id="info-text"
-              >Plus de 500 logements sont disponibles dans cette ville</span
-            >
-          </div>
+        </div>
+        <div id="info">
+          <i class="fas fa-info"></i>
+          <span id="info-text"
+            >Plus de 500 logements sont disponibles dans cette ville</span
+          >
         </div>
       </section>
 
