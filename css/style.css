@@ -13,6 +13,7 @@ a {
 
 h2 {
   font-weight: 600;
+  margin: 0;
 }
 
 h4 {
@@ -24,11 +25,12 @@ header {
   align-items: center;
   max-width: 1380px;
   margin: auto;
+  padding: 0 2rem;
 }
 
 .logo {
   height: 2.8rem;
-  padding: 0 2rem;
+  padding: 0 0;
   grid-area: logo;
 }
 
@@ -76,9 +78,12 @@ header {
   .header {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "logo . inscription" "navigation navigation navigation";
+    padding: 0;
   }
+
   .logo {
     order: 0;
+    padding-left: 1.5rem;
   }
   .navigation-sinscrire {
     order: 1;
@@ -225,6 +230,7 @@ main {
 #info {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 #info > i {
@@ -241,4 +247,178 @@ main {
 }
 #info > span {
   margin: 0 0 0 0.7rem;
+}
+
+/*Hebergements*/
+
+.section-hebergements {
+  display: grid;
+  column-gap: 2.5rem;
+  row-gap: 2rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.hebergement {
+  background-color: #f2f2f2;
+  border-radius: 1.5rem;
+  /*max-width: 880px;*/
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.hebergements-titre {
+  grid-column: 1 / -1;
+}
+.cartes-hebergements {
+  background-color: #ffff;
+  border-radius: 1.3rem;
+  box-shadow: 0 5px 10px #d6d6d6;
+  height: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+.carte-hebergements-description {
+  margin: 0 0 0.3rem 0.7rem;
+  font-size: 0.9rem;
+}
+.carte-hebergements-figure {
+  margin: 0;
+}
+.image-h-1 {
+  height: 7rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.carte-hebergements-figure-legende {
+  margin: 0.5rem 0 0.3rem 0.7rem;
+}
+.hebergement-plus {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/*Populaires*/
+
+.image-h-2 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.hebergements-populaires-titre {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hebergements-populaires {
+  background-color: #f2f2f2;
+  /*max-width: 342px;*/
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: grid;
+  row-gap: 2rem;
+}
+.cartes-hebergements-populaires {
+  background-color: #ffff;
+  border-radius: 1.3rem;
+  box-shadow: 0 5px 10px #d6d6d6;
+  height: 100%;
+  min-height: 145px;
+  max-height: 145px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+}
+.cartes-hebergements-populaires > a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+}
+
+.carte-hebergements-populaire-figure {
+  margin: 0;
+  max-width: 40%;
+  height: 100%;
+  display: flex;
+}
+.carte-hebergements-populaire-texte {
+  position: relative;
+  width: 60%;
+  max-width: 60%;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.hebergements-pop-vide {
+  flex-grow: 1;
+  padding-bottom: 1rem;
+}
+.carte-hebergements-figure-legende-titre {
+  margin: 0;
+}
+.carte-hebergements-description-2 {
+  margin: 0 0 0.3rem 0;
+  font-size: 0.9rem;
+}
+.carte-hebergements-evaluation {
+  margin: 0.6rem 0 0 0.6rem;
+  font-size: 0.8rem;
+}
+.carte-hebergements-pop-evaluation {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.carte-hebergements-figure-legende-2 {
+  margin: 0 0 0.3rem 0;
+}
+.active-true {
+  color: #0065fc;
+}
+.active-false {
+  color: #e4e4e4;
+}
+@media screen and (max-width: 1280px) {
+  .section-hebergements {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .hebergements-populaires {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    /*grid-template-rows: auto 10rem;*/
+    grid-row-start: 1;
+  }
+  .hebergements-populaires-titre {
+    grid-column: 1 / -1;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hebergements-populaires {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 899px) and (min-width: 600px) {
+  .hebergement {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hebergement {
+    grid-template-columns: 1fr;
+  }
 }
