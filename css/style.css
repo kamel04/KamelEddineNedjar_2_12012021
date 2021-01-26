@@ -248,7 +248,6 @@ main {
   row-gap: 2rem;
   grid-template-columns: 2fr 1fr;
   margin-bottom: 3rem;
-  min-width: ;
 }
 
 .hebergement {
