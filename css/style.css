@@ -351,6 +351,7 @@ main {
   max-width: 40%;
   height: 100%;
   display: flex;
+  overflow: hidden;
 }
 .carte-hebergements-populaire-texte {
   position: relative;
@@ -360,6 +361,7 @@ main {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .hebergements-pop-vide {
   flex-grow: 1;
